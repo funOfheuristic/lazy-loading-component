@@ -2,7 +2,11 @@
 <div style="text-align: center;">
   <h1>Hi</h1>
 
-  <ng-template *ngIf="lazyCom" [ngComponentOutlet] = "lazyCom | async"></ng-template>
+  <ng-template 
+    *ngIf="lazyCom" 
+    [ngComponentOutlet] = "lazyCom | async" 
+    [ngComponentOutletInjector] = "lazyInjector">
+  </ng-template>
 
   <h1>Fun of Heuristic</h1>
 <button (click)="load()">Load</button>
